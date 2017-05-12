@@ -25,6 +25,14 @@ class Events(object):
         """
         Database.insert('events', self.json())
 
+    def json(self):
+        return{
+            '_id': self._id,
+            'event_date': self.event_date,
+            'calendar_id': self.calendar_id,
+            'event_name': self.event_date,
+            'event_venue': self.event_venue
+        }
 
 
 
